@@ -7,11 +7,6 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 20px;
-  /* background-image: url('deuses-gregos.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    z-index: -1; */
 }
 .flex-container {
   display: flex;
