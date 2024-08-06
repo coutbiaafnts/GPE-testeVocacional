@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Perfil Comportamental de TI</title>
+
+    <style>
+        body {
+            /*background-color: #f2f2f2;*/
+            background-image: url('imagens/5134336.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 9px 14px;
+            display: inline-block;
+            font-size: 13px;
+            text-align: center;
+            color: black;
+            background-color: skyblue;
+        }
+
+        div {
+            width: 550px;
+            height: 150px;
+            border-bottom: 1px solid gray;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        label {
+            font-size: 17px;
+            padding: 45px;
+        }
+
+        input {
+            padding: 45px;
+            ;
+        }
+
+        #t3 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .main {
+            border: 10px;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 39%;
+        }
+
+        #t1 {
+            font-size: 20px;
+        }
+
+        #t2 {
+            font-size: 19px;
+        }
+    </style>
+
+    <script>
+        function calcularResultado() {
+            var perfilS1 = 0;
+            var perfilS2 = 0;
+            var perfilS3 = 0;
+            var perfilS4 = 0;
+
+            for (var i = 1; i <= 25; i++) {
+                var respostaSelecionada = document.querySelector('input[name=q' + i + ']:checked');
+
+                if (respostaSelecionada !== null) {
+                    var valorResposta = respostaSelecionada.value;
+
+                    switch (valorResposta) {
+                        case 's1':
+                            perfilS1++;
+                            break;
+                        case 's2':
+                            perfilS2++;
+                            break;
+                        case 's3':
+                            perfilS3++;
+                            break;
+                        case 's4':
+                            perfilS4++;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            var totalPerguntas = 25;
+            var percentualS1 = (perfilS1 / totalPerguntas) * 100;
+            var percentualS2 = (perfilS2 / totalPerguntas) * 100;
+            var percentualS3 = (perfilS3 / totalPerguntas) * 100;
+            var percentualS4 = (perfilS4 / totalPerguntas) * 100;
+
+            document.getElementById('resultado').innerHTML = `
+                <p>Ares - Foco em resultados - ${percentualS1.toFixed(2)}%</p>
+                
+                <p>Apolo - Criatividade e Liberdade - ${percentualS2.toFixed(2)}%</p>
+                
+                <p>Afrodite - Felicidade e Igualdade - ${percentualS3.toFixed(2)}%</p>
+                
+                <p>Zeus - Ordem e controle - ${percentualS4.toFixed(2)}%</p>
+            `;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Teste de Perfil Comportamental de TI</h1>
+    <p id="t1">Este teste foi desenvolvido para identificar o perfil comportamental de TI de
+        profissionais que atuam na área de Tecnologia da Informação. O teste é
+        composto por 25 questões de múltipla escolha.
+    </p>
+    <p id="t2"> Ao final do teste, o resultado será apresentado com a classificação do perfil comportamental de TI do
+        profissional.</p>
+    <div class="main">
+        <div>
+            <p id="t3">1. Eu sou...</p>
+            <input type="radio" name="q1" value="s2">
+            <label for="q1a">A. Idealista, criativo e visionário</label><br>
+
+            <input type="radio" name="q1" value="s3">
+            <label for="q1b">B. Divertido, espiritual e benéfico</label><br>
+
+            <input type="radio" name="q1" value="s4">
+            <label for="q1c">C. Confiável, meticuloso e previsível</label><br>
+
+            <input type="radio" name="q1" value="s1">
+            <label for="q1d">D. Focado, determinado e persistente</label><br>
+        </div>
+        <div>
+            <p id="t3">2. Eu gosto de....</p>
+            <input type="radio" name="q2" value="s1">
+            <label for="q2a">A. Ser piloto</label><br>
+
+            <input type="radio" name="q2" value="s2">
+            <label for="q2b">B. Conversar com os passageiros</label><br>
+
+            <input type="radio" name="q2" value="s4">
+            <label for="q2c">C. Planejar a viagem</label><br>
+
+            <input type="radio" name="q2" value="s3">
+            <label for="q2d">D. Explorar novas rotas</label><br>
+        </div>
+        <div>
+            <p id="t3">3. Se você quiser se dar bem comigo...</p>
+            <input type="radio" name="q3" value="s1">
+            <label for="q3a">A. Me dê liberdade</label><br>
+
+            <input type="radio" name="q3" value="s2">
+            <label for="q3b">B. Me deixe saber sua expectativa</label><br>
+
+            <input type="radio" name="q3" value="s4">
+            <label for="q3c">C. Lidere, siga ou saia do caminho</label><br>
+
+            <input type="radio" name="q3" value="s3">
+            <label for="q3d">D. Seja amigável, carinhoso e compreensivo</label><br>
+        </div>
+        <div>
+            <p id="t3">4. Para conseguir obter bons resultados é preciso...</p>
+            <input type="radio" name="q4" value="s1">
+            <label for="q4a">A. Ter incertezas</label><br>
+
+            <input type="radio" name="q4" value="s4">
+            <label for="q4b">B. Controlar o essencial</label><br>
+
+            <input type="radio" name="q4" value="s3">
+            <label for="q4c">C. Diversão e cerebração</label><br>
+
+            <input type="radio" name="q4" value="s2">
+            <label for="q4d">D. Planejar e obter recursos</label><br>
+        </div>
+        <div>
+            <p id="t3">5. Eu me divirto quando...</p>
+            <input type="radio" name="q5" value="s1">
+            <label for="q5a">A. Estou me exercitando</label><br>
+
+            <input type="radio" name="q5" value="s2">
+            <label for="q5b">B. Tenho novidades</label><br>
+
+            <input type="radio" name="q5" value="s3">
+            <label for="q5c">C. Estou com os outros</label><br>
+
+            <input type="radio" name="q5" value="s4">
+            <label for="q5d">D. Determino as regras</label><br>
+        </div>
+        <div>
+            <p id="t3">6. Eu penso que...</p>
+            <input type="radio" name="q6" value="s1">
+            <label for="q6a">A. Unidos venceremos, divididos perderemos</label><br>
+
+            <input type="radio" name="q6" value="s4">
+            <label for="q6b">B. O ataque é melhor que a defesa</label><br>
+
+            <input type="radio" name="q6" value="s3">
+            <label for="q6c">C. É bom ser manso, mas andar com um porrete</label><br>
+
+            <input type="radio" name="q6" value="s2">
+            <label for="q6d">D. Um homem prevenido vale por dois</label><br>
+        </div>
+        <div>
+            <p id="t3">7. Minha preocupação é...</p>
+            <input type="radio" name="q7" value="s2">
+            <label for="q7a">A. Gerar a ideia global</label><br>
+
+            <input type="radio" name="q7" value="s3">
+            <label for="q7b">B. Fazer com que as pessoas gostem</label><br>
+
+            <input type="radio" name="q7" value="s4">
+            <label for="q7c">C. Fazer com que funcione</label><br>
+
+            <input type="radio" name="q7" value="s1">
+            <label for="q7d">D. Fazer com que aconteça</label><br>
+        </div>
+        <div>
+            <p id="t3">8. Eu prefiro...</p>
+            <input type="radio" name="q8" value="s1">
+            <label for="q8a">A. Perguntas a respostas</label><br>
+
+            <input type="radio" name="q8" value="s2">
+            <label for="q8b">B. Ter todos os detalhes</label><br>
+
+            <input type="radio" name="q8" value="s4">
+            <label for="q8c">C. Vantagens a meu favor</label><br>
+
+            <input type="radio" name="q8" value="s3">
+            <label for="q8d">D. Que todos tenham a chance de ser ouvido</label><br>
+        </div>
+        <div>
+            <p id="t3">9. Eu gosto de...</p>
+            <input type="radio" name="q9" value="s1">
+            <label for="q9a">A. Fazer progresso</label><br>
+
+            <input type="radio" name="q9" value="s2">
+            <label for="q9b">B. Construir memórias</label><br>
+
+            <input type="radio" name="q9" value="s3">
+            <label for="q9c">C. Fazer sentido</label><br>
+
+            <input type="radio" name="q9" value="s4">
+            <label for="q9d">D. Tornar as pessoas confortáveis</label><br>
+        </div>
+        <div>
+            <p id="t3">10. Eu gosto de chegar...</p>
+            <input type="radio" name="q10" value="s1">
+            <label for="q10a">A. Na frente</label><br>
+
+            <input type="radio" name="q10" value="s2">
+            <label for="q10b">B. Junto</label><br>
+
+            <input type="radio" name="q10" value="s3">
+            <label for="q10c">C. Na hora</label><br>
+
+            <input type="radio" name="q10" value="s4">
+            <label for="q10d">D. Em outro lugar</label><br>
+        </div>
+        <div>
+            <p id="t3">11. Um ótimo dia para mim é quando...</p>
+            <input type="radio" name="q11" value="s1">
+            <label for="q11a">A. Consigo fazer muitas coisas</label><br>
+
+            <input type="radio" name="q11" value="s3">
+            <label for="q11b">B. As pessoas gostam de mim</label><br>
+
+            <input type="radio" name="q11" value="s2">
+            <label for="q11c">C. Tenho tempo para pensar e trabalhar em meus projetos</label><br>
+
+            <input type="radio" name="q11" value="s4">
+            <label for="q11d">D. As coisas correm conforme planejado</label><br>
+        </div>
+        <div>
+            <p id="t3">12. Eu me sinto motivado quando...</p>
+            <input type="radio" name="q12" value="s3">
+            <label for="q12a">A. Tenho apoio e incentivo</label><br>
+
+            <input type="radio" name="q12" value="s2">
+            <label for="q12b">B. Vejo progresso e desenvolvimento</label><br>
+
+            <input type="radio" name="q12" value="s4">
+            <label for="q12c">C. Tenho controle sobre a situação</label><br>
+
+            <input type="radio" name="q12" value="s1">
+            <label for="q12d">D. Estou desafiado</label><br>
+        </div>
+        <div>
+            <p id="t3">13. A melhor maneira de obter resultados é...</p>
+            <input type="radio" name="q13" value="s4">
+            <label for="q13a">A. Com um bom planejamento</label><br>
+
+            <input type="radio" name="q13" value="s1">
+            <label for="q13b">B. Persistindo</label><br>
+
+            <input type="radio" name="q13" value="s2">
+            <label for="q13c">C. Com criatividade e inovação</label><br>
+
+            <input type="radio" name="q13" value="s3">
+            <label for="q13d">D. Trabalhando bem com os outros</label><br>
+        </div>
+        <div>
+            <p id="t3">14. Eu me sinto realizado quando...</p>
+            <input type="radio" name="q14" value="s3">
+            <label for="q14a">A. Tenho conexões e relacionamentos positivos</label><br>
+
+            <input type="radio" name="q14" value="s4">
+            <label for="q14b">B. Concluo tarefas e projetos com sucesso</label><br>
+
+            <input type="radio" name="q14" value="s2">
+            <label for="q14c">C. Desenvolvo e crio coisas novas</label><br>
+
+            <input type="radio" name="q14" value="s1">
+            <label for="q14d">D. Supero desafios</label><br>
+        </div>
+        <div>
+            <p id="t3">15. Para mim, um bom trabalho é...</p>
+            <input type="radio" name="q15" value="s3">
+            <label for="q15a">A. Aquele que traz satisfação para todos</label><br>
+
+            <input type="radio" name="q15" value="s4">
+            <label for="q15b">B. Aquele que está bem planejado e executado</label><br>
+
+            <input type="radio" name="q15" value="s1">
+            <label for="q15c">C. Aquele que me desafia</label><br>
+
+            <input type="radio" name="q15" value="s2">
+            <label for="q15d">D. Aquele que permite criatividade e inovação</label><br>
+        </div>
+        <div>
+            <p id="t3">16. Meu estilo de trabalho é...</p>
+            <input type="radio" name="q16" value="s1">
+            <label for="q16a">A. Ágil e flexível</label><br>
+
+            <input type="radio" name="q16" value="s2">
+            <label for="q16b">B. Detalhado e meticuloso</label><br>
+
+            <input type="radio" name="q16" value="s3">
+            <label for="q16c">C. Colaborativo e inclusivo</label><br>
+
+            <input type="radio" name="q16" value="s4">
+            <label for="q16d">D. Organizado e estruturado</label><br>
+        </div>
+        <div>
+            <p id="t3">17. Em um projeto, eu prefiro...</p>
+            <input type="radio" name="q17" value="s2">
+            <label for="q17a">A. Seguir um plano detalhado</label><br>
+
+            <input type="radio" name="q17" value="s4">
+            <label for="q17b">B. Ter liberdade para improvisar</label><br>
+
+            <input type="radio" name="q17" value="s1">
+            <label for="q17c">C. Focar nos resultados finais</label><br>
+
+            <input type="radio" name="q17" value="s3">
+            <label for="q17d">D. Trabalhar em equipe</label><br>
+        </div>
+        <div>
+            <p id="t3">18. Eu me sinto mais produtivo quando...</p>
+            <input type="radio" name="q18" value="s4">
+            <label for="q18a">A. Tenho um ambiente bem organizado</label><br>
+
+            <input type="radio" name="q18" value="s3">
+            <label for="q18b">B. Colaboro com os outros</label><br>
+
+            <input type="radio" name="q18" value="s2">
+            <label for="q18c">C. Tenho um plano claro e detalhado</label><br>
+
+            <input type="radio" name="q18" value="s1">
+            <label for="q18d">D. Tenho liberdade para experimentar</label><br>
+        </div>
+        <div>
+            <p id="t3">19. Quando enfrento um desafio, eu...</p>
+            <input type="radio" name="q19" value="s1">
+            <label for="q19a">A. Encaro com determinação</label><br>
+
+            <input type="radio" name="q19" value="s4">
+            <label for="q19b">B. Faço um plano estratégico</label><br>
+
+            <input type="radio" name="q19" value="s3">
+            <label for="q19c">C. Procuro apoio e colaboração</label><br>
+
+            <input type="radio" name="q19" value="s2">
+            <label for="q19d">D. Busco uma solução criativa</label><br>
+        </div>
+        <div>
+            <p id="t3">20. Para alcançar meus objetivos, eu...</p>
+            <input type="radio" name="q20" value="s2">
+            <label for="q20a">A. Planejo meticulosamente</label><br>
+
+            <input type="radio" name="q20" value="s3">
+            <label for="q20b">B. Faço parcerias e colaborações</label><br>
+
+            <input type="radio" name="q20" value="s4">
+            <label for="q20c">C. Organizo meu ambiente e recursos</label><br>
+
+            <input type="radio" name="q20" value="s1">
+            <label for="q20d">D. Encaro os desafios de frente</label><br>
+        </div>
+        <div>
+            <p id="t3">21. Meu maior desejo é...</p>
+            <input type="radio" name="q21" value="s1">
+            <label for="q21a">A. Superar desafios pessoais</label><br>
+
+            <input type="radio" name="q21" value="s2">
+            <label for="q21b">B. Conquistar segurança e estabilidade</label><br>
+
+            <input type="radio" name="q21" value="s3">
+            <label for="q21c">C. Manter relacionamentos positivos</label><br>
+
+            <input type="radio" name="q21" value="s4">
+            <label for="q21d">D. Ter sucesso e reconhecimento</label><br>
+        </div>
+        <div>
+            <p id="t3">22. Eu me sinto mais confiante quando...</p>
+            <input type="radio" name="q22" value="s1">
+            <label for="q22a">A. Tenho controle sobre a situação</label><br>
+
+            <input type="radio" name="q22" value="s2">
+            <label for="q22b">B. Tenho um plano bem definido</label><br>
+
+            <input type="radio" name="q22" value="s3">
+            <label for="q22c">C. Recebo apoio dos outros</label><br>
+
+            <input type="radio" name="q22" value="s4">
+            <label for="q22d">D. Tenho um ambiente bem estruturado</label><br>
+        </div>
+        <div>
+            <p id="t3">23. Eu me sinto mais realizado quando...</p>
+            <input type="radio" name="q23" value="s3">
+            <label for="q23a">A. Ajudo os outros a alcançar seus objetivos</label><br>
+
+            <input type="radio" name="q23" value="s4">
+            <label for="q23b">B. Completei um projeto com sucesso</label><br>
+
+            <input type="radio" name="q23" value="s1">
+            <label for="q23c">C. Superei um desafio pessoal</label><br>
+
+            <input type="radio" name="q23" value="s2">
+            <label for="q23d">D. Desenvolvi algo novo</label><br>
+        </div>
+        <div>
+            <p id="t3">24. Eu me sinto mais confortável em...</p>
+            <input type="radio" name="q24" value="s2">
+            <label for="q24a">A. Ambientes planejados e organizados</label><br>
+
+            <input type="radio" name="q24" value="s3">
+            <label for="q24b">B. Ambientes colaborativos e inclusivos</label><br>
+
+            <input type="radio" name="q24" value="s4">
+            <label for="q24c">C. Ambientes estruturados e previsíveis</label><br>
+
+            <input type="radio" name="q24" value="s1">
+            <label for="q24d">D. Ambientes dinâmicos e desafiadores</label><br>
+        </div>
+        <div>
+            <p id="t3">25. Em um projeto de equipe, eu prefiro...</p>
+            <input type="radio" name="q25" value="s3">
+            <label for="q25a">A. Trabalhar com base em ideias colaborativas</label><br>
+
+            <input type="radio" name="q25" value="s4">
+            <label for="q25b">B. Ter um plano e estrutura claros</label><br>
+
+            <input type="radio" name="q25" value="s1">
+            <label for="q25c">C. Conduzir o projeto e tomar decisões</label><br>
+
+            <input type="radio" name="q25" value="s2">
+            <label for="q25d">D. Manter a flexibilidade e inovação</label><br>
+        </div>
+
+    <button onclick="calcularResultado()">Calcular Resultado</button>
+
+    <p id="resultado"></p>
+    <br>
+    <a href="C:\Users\0077108\Documents\Questionario-GPE\desc.html">Entenda seu perfil</a>
+
+    <footer>
+        <br>
+        <br>
+        <p>Desenvolvido por: Deivid Henrique Nunes da Costa</p>
+        <br>
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
