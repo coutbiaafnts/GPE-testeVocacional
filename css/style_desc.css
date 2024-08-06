@@ -1,0 +1,69 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  /* background-image: url('deuses-gregos.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    z-index: -1; */
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fffafa;
+}
+.box {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  background-color: #fafafa;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: auto;
+  resize: both;
+  background-color: #f8f8ff;
+}
+.box p {
+  font-size: 17px;
+  margin: 10px 0;
+}
+h1,
+h3 {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid gray;
+  margin-top: auto;
+}
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
