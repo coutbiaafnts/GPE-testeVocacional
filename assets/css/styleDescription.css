@@ -1,5 +1,5 @@
 body {
-  background-color: #f2f2f2;
+  background-image: url('../img/background_marmore.jpg');
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
@@ -7,6 +7,9 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .flex-container {
   display: flex;
@@ -16,34 +19,66 @@ body {
   gap: 20px;
   max-width: 1000px;
   width: 100%;
-  background-color: #fff;
+  background-color: #f1f1ed73;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fffafa;
 }
 .box {
-  border: 1px solid gray;
+  border: 1px solid rgb(160, 117, 58);
   border-radius: 8px;
   padding: 20px;
   max-width: 500px;
-  background-color: #fafafa;
+  background-color: #f3f2ed;
   text-align: center;
   box-sizing: border-box;
   overflow: auto;
   resize: both;
-  background-color: #f8f8ff;
 }
 .box p {
   font-size: 17px;
   margin: 10px 0;
 }
-h1,
+
+#p1 {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #654d04;
+}
+
+p {
+  font-size: 10px;
+  color: #2C2B00;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #654d04;
+}
 h3 {
   text-align: center;
   margin: 0 0 20px 0;
+  font-size: 20px;
+  color: #2C2B00;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 footer {
   text-align: center;
@@ -53,6 +88,7 @@ footer {
   margin-top: auto;
 }
 a {
+  font-size: 18px;
   display: block;
   text-align: center;
   margin-top: 20px;
