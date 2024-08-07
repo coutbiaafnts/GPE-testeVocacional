@@ -1,5 +1,5 @@
 body {
-  background-image: url("imagens/5134336.jpg");
+  background-image: url('../img/background_marmore.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -7,40 +7,60 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 40px;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #654d04;
 }
 
 button {
   margin: 10px;
+  margin-top: 20px;
   padding: 9px 14px;
+  border-radius: 5px;
   display: inline-block;
   font-size: 13px;
   text-align: center;
   color: black;
-  background-color: skyblue;
+  background-color: rgb(232, 217, 174);
+  cursor: pointer;
 }
 
+button:hover{
+  background-color: #dcc073;
+}
 div {
   width: 550px;
   height: 150px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(203, 155, 83);
+  padding-bottom: 15px;
 }
 
 p {
   text-align: center;
+  padding-right: 90px;
+  padding-left: 90px;
 }
 
 label {
-  font-size: 17px;
-  padding: 45px;
+  font-size: 15px;
+  padding: 20px;
+  color: #2C2B00;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 
 input {
-  padding: 45px;
+  padding: 40px;
+  color: #2C2B00;
+
 }
 
-#t3 {
-  text-align: center;
-  font-size: 20px;
+input[type='radio']:checked {
+  accent-color: #7a6012;
 }
 
 .main {
@@ -48,13 +68,36 @@ input {
   padding-top: 50px;
   padding-right: 30px;
   padding-bottom: 50px;
-  padding-left: 39%;
+  padding-left: 32%;
 }
 
 #t1 {
   font-size: 20px;
+  color: #2C2B00;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 #t2 {
   font-size: 19px;
+  color: #2C2B00;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
+
+#t3 {
+  text-align: center;
+  font-size: 20px;
+  color: #2C2B00;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #654d04;
+}
+
+
