@@ -111,3 +111,16 @@ footer {
   font-weight: 500;
   font-style: normal;
 }
+
+a {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(115, 91, 21);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
