@@ -1,6 +1,7 @@
 body {
   background-color: #f2f2f2;
-  margin: 0;
+  margin-left: 30%;
+  margin-right: 30%;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -8,6 +9,7 @@ body {
   box-sizing: border-box;
   padding: 20px;
 }
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -24,6 +26,7 @@ body {
   padding: 20px;
   background-color: #fffafa;
 }
+
 .box {
   border: 1px solid gray;
   border-radius: 8px;
@@ -36,22 +39,27 @@ body {
   resize: both;
   background-color: #f8f8ff;
 }
+
 .box p {
   font-size: 17px;
   margin: 10px 0;
 }
+
 h1,
 h3 {
   text-align: center;
   margin: 0 0 20px 0;
 }
+
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #fff;
-  border-top: 1px solid gray;
-  margin-top: auto;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
+
 a {
   display: block;
   text-align: center;
@@ -59,6 +67,7 @@ a {
   color: rgb(115, 91, 21);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }

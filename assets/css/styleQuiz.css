@@ -28,12 +28,11 @@ button {
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: #dcc073;
 }
+
 div {
-  width: 550px;
-  height: 150px;
   border-bottom: 1px solid rgb(203, 155, 83);
   padding-bottom: 15px;
 }
@@ -56,7 +55,10 @@ label {
 input {
   padding: 40px;
   color: #2C2B00;
-
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 
 input[type='radio']:checked {
@@ -65,10 +67,11 @@ input[type='radio']:checked {
 
 .main {
   border: 10px;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 32%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 #t1 {
@@ -100,4 +103,11 @@ input[type='radio']:checked {
   color: #654d04;
 }
 
-
+footer {
+  text-align: center;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
